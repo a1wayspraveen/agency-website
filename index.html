@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="companies">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeCraft Studio & ProjectBuddyHub | Engineering & Academic Agency</title>
+  <meta name="description" content="Dual-audience software agency delivering production-grade web/mobile/AI engineering for companies, and guided final-year capstone projects with IEEE documentation for students.">
+  
+  <!-- Typography: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. STICKY HEADER & DUAL-THEME SWITCHER
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container nav-container">
+      
+      <!-- Dynamic Brand & Logo -->
+      <a href="#hero" class="brand-link" id="brand-link" aria-label="Home">
+        <div class="brand-logo-frame">
+          <img src="assets/CodeCraftStudio_logo.jpeg" alt="CodeCraft Studio Logo" id="navbar-logo" width="36" height="36">
+        </div>
+        <div class="brand-text-wrapper">
+          <span class="brand-name" id="brand-name">CodeCraft Studio</span>
+          <span class="brand-tagline" id="brand-tagline">Engineering & Product Studio</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+          <li><a href="#process" class="nav-link">Process</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions: Segmented Theme Switcher + CTA -->
+      <div class="nav-actions">
+        <div class="theme-switcher-wrapper">
+          <div class="segmented-switcher" role="radiogroup" aria-label="Audience View Switcher">
+            <button type="button" 
+                    class="segmented-btn" 
+                    id="theme-btn-companies" 
+                    role="radio" 
+                    aria-checked="true" 
+                    aria-pressed="true"
+                    data-target-theme="companies">
+              <span>●</span> For Companies
+            </button>
+            <button type="button" 
+                    class="segmented-btn" 
+                    id="theme-btn-students" 
+                    role="radio" 
+                    aria-checked="false" 
+                    aria-pressed="false"
+                    data-target-theme="students">
+              <span>●</span> For Students
+            </button>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta-btn" id="nav-cta-btn">
+          Get in Touch
+        </a>
+
+        <!-- Mobile Drawer Toggle -->
+        <button type="button" class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <ul class="mobile-drawer-links">
+      <li><a href="#services" class="mobile-drawer-link">Services</a></li>
+      <li><a href="#portfolio" class="mobile-drawer-link">Portfolio</a></li>
+      <li><a href="#process" class="mobile-drawer-link">Process</a></li>
+      <li><a href="#contact" class="mobile-drawer-link">Contact</a></li>
+    </ul>
+    <div style="padding-top: 1rem; border-top: 1px solid var(--border-color);">
+      <a href="#contact" class="btn btn-primary" style="width: 100%;">Get in Touch</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ========================================================================
+         2. DYNAMIC HERO SECTION
+         ======================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        
+        <!-- Left Content Column -->
+        <div class="hero-content">
+          <div class="hero-badge-wrap">
+            <span class="audience-flag" id="hero-audience-flag">
+              AUDIENCE // 01: ENTERPRISE & SCALING TECH
+            </span>
+            <span class="badge">
+              <span class="badge-dot"></span>
+              <span id="hero-status-text">Production Engineering Tier</span>
+            </span>
+          </div>
+
+          <h1 class="hero-title" id="hero-title">
+            High-integrity software engineering, custom platforms, and <span class="accent-span">production-grade AI</span>.
+          </h1>
+
+          <p class="hero-description" id="hero-description">
+            We architect, build, and deploy robust web applications, mobile platforms, applied AI systems, and security-hardened infrastructure for enterprises and fast-growing startups.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#services" class="btn btn-primary" id="hero-primary-cta">
+              Explore Services
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#portfolio" class="btn btn-secondary" id="hero-secondary-cta">
+              Review Past Work ↗
+            </a>
+          </div>
+
+          <!-- Hero Secondary Switcher Prompter -->
+          <div class="hero-audience-pill">
+            <span>Viewing for: <strong id="hero-viewing-label">Companies</strong></span>
+            <button type="button" class="hero-switcher-btn" id="hero-switch-trigger">
+              Switch to For Students ⇄
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Terminal / Proof Spec Card -->
+        <div class="hero-specs-card">
+          <div class="specs-header">
+            <div class="specs-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              <span id="specs-card-heading">SYSTEM SPECS // PRODUCTION SLA</span>
+            </div>
+            <div class="specs-status">
+              <span class="specs-status-pulse"></span>
+              <span id="specs-card-substatus">ACTIVE</span>
+            </div>
+          </div>
+
+          <div class="specs-grid" id="specs-kpi-grid">
+            <div class="spec-metric-item">
+              <div class="spec-metric-value" id="kpi-val-1">99.9<span class="unit">%</span></div>
+              <div class="spec-metric-label" id="kpi-lbl-1">Target Uptime SLA</div>
+            </div>
+            <div class="spec-metric-item">
+              <div class="spec-metric-value" id="kpi-val-2">&lt;180<span class="unit">ms</span></div>
+              <div class="spec-metric-label" id="kpi-lbl-2">Avg P99 Response</div>
+            </div>
+            <div class="spec-metric-item">
+              <div class="spec-metric-value" id="kpi-val-3">OWASP<span class="unit"> 10</span></div>
+              <div class="spec-metric-label" id="kpi-lbl-3">Security Hardened</div>
+            </div>
+            <div class="spec-metric-item">
+              <div class="spec-metric-value" id="kpi-val-4">Zero<span class="unit"> Bloat</span></div>
+              <div class="spec-metric-label" id="kpi-lbl-4">Clean Architecture</div>
+            </div>
+          </div>
+
+          <ul class="specs-features-list" id="specs-bullet-list">
+            <li>End-to-end full stack delivery with CI/CD automation</li>
+            <li>Custom applied AI pipelines with localized embeddings</li>
+            <li>Zero-trust security reviews and vulnerability scans</li>
+            <li>Modular code ownership transferred 100% to your team</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         3. SERVICES GRID (5 CORE PILLARS - BENTO GRID)
+         ======================================================================== -->
+    <section class="services-section section-padding" id="services">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-label">ENGINEERING CAPABILITIES</span>
+          <h2 class="section-title">Five Core Technical Pillars</h2>
+          <p class="section-desc">
+            Rigorous technical execution across modern full-stack development, mobile ecosystems, applied machine intelligence, and security infrastructure.
+          </p>
+        </div>
+
+        <div class="bento-grid">
+          
+          <!-- Pillar 1: Web Development (Span 7) -->
+          <div class="bento-card bento-web">
+            <div>
+              <div class="bento-header">
+                <div class="bento-icon-frame">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </div>
+                <span class="bento-number">PILLAR // 01</span>
+              </div>
+              <h3 class="bento-title">Full-Stack Web Development</h3>
+              <p class="bento-desc">
+                High-performance web applications built with semantic standards, resilient backend APIs, fast database indexing, and streamlined state machines.
+              </p>
+            </div>
+
+            <div class="bento-deliverable-box">
+              <div class="deliverable-box-label">
+                <span>Deliverables Scope</span>
+                <span class="deliverable-audience-tag deliverable-tag-text">Enterprise Mode</span>
+              </div>
+              <ul class="deliverables-list" id="deliverables-web">
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Scalable Node.js / Express or Next.js architecture</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Automated testing & CI/CD deployment pipelines</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Relational / Document DB schema design & indexing</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Pillar 2: Mobile Apps (Span 5) -->
+          <div class="bento-card bento-mobile">
+            <div>
+              <div class="bento-header">
+                <div class="bento-icon-frame">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                </div>
+                <span class="bento-number">PILLAR // 02</span>
+              </div>
+              <h3 class="bento-title">Mobile App Engineering</h3>
+              <p class="bento-desc">
+                Native and cross-platform iOS/Android applications built with Flutter or React Native, optimized for low memory overhead and smooth 60fps interaction.
+              </p>
+            </div>
+
+            <div class="bento-deliverable-box">
+              <div class="deliverable-box-label">
+                <span>Deliverables Scope</span>
+                <span class="deliverable-audience-tag deliverable-tag-text">Enterprise Mode</span>
+              </div>
+              <ul class="deliverables-list" id="deliverables-mobile">
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Cross-platform codebase with offline-first synchronization</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Biometric auth, push notifications, and App Store submission</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Pillar 3: Applied AI & ML (Span 4) -->
+          <div class="bento-card bento-ai">
+            <div>
+              <div class="bento-header">
+                <div class="bento-icon-frame">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                </div>
+                <span class="bento-number">PILLAR // 03</span>
+              </div>
+              <h3 class="bento-title">Applied AI & Machine Learning</h3>
+              <p class="bento-desc">
+                Pragmatic AI integrations: retrieval-augmented generation (RAG), domain embeddings, computer vision models, and supervised classification pipelines.
+              </p>
+            </div>
+
+            <div class="bento-deliverable-box">
+              <div class="deliverable-box-label">
+                <span>Deliverables Scope</span>
+                <span class="deliverable-audience-tag deliverable-tag-text">Enterprise Mode</span>
+              </div>
+              <ul class="deliverables-list" id="deliverables-ai">
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Custom RAG with vector search (pgvector/Pinecone)</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Deterministic guardrails and evaluation metrics</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Pillar 4: UI/UX & Design Systems (Span 4) -->
+          <div class="bento-card bento-design">
+            <div>
+              <div class="bento-header">
+                <div class="bento-icon-frame">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+                </div>
+                <span class="bento-number">PILLAR // 04</span>
+              </div>
+              <h3 class="bento-title">UI/UX & Systems Design</h3>
+              <p class="bento-desc">
+                Editorial, purposeful user interfaces built from strict token systems, high-density dashboard layouts, and accessible typographic hierarchies.
+              </p>
+            </div>
+
+            <div class="bento-deliverable-box">
+              <div class="deliverable-box-label">
+                <span>Deliverables Scope</span>
+                <span class="deliverable-audience-tag deliverable-tag-text">Enterprise Mode</span>
+              </div>
+              <ul class="deliverables-list" id="deliverables-design">
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Production Figma component library with auto-layout</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> WCAG AA compliance and accessible keyboard flow</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Pillar 5: Cybersecurity & Audits (Span 4) -->
+          <div class="bento-card bento-security">
+            <div>
+              <div class="bento-header">
+                <div class="bento-icon-frame">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <span class="bento-number">PILLAR // 05</span>
+              </div>
+              <h3 class="bento-title">Cybersecurity & Security Audits</h3>
+              <p class="bento-desc">
+                Security-first code reviews, automated OWASP Top-10 penetration testing, authentication token audits, and zero-trust data protection schemas.
+              </p>
+            </div>
+
+            <div class="bento-deliverable-box">
+              <div class="deliverable-box-label">
+                <span>Deliverables Scope</span>
+                <span class="deliverable-audience-tag deliverable-tag-text">Enterprise Mode</span>
+              </div>
+              <ul class="deliverables-list" id="deliverables-security">
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Static & dynamic vulnerability vulnerability reports</li>
+                <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> JWT/session remediation and cryptographic verification</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         4. DELIVERED PROJECTS PORTFOLIO (WITH NESTNOTES)
+         ======================================================================== -->
+    <section class="portfolio-section section-padding" id="portfolio">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-label">ENGINEERING ARCHIVE</span>
+          <h2 class="section-title">Delivered Projects & Systems</h2>
+          <p class="section-desc">
+            Production codebases, academic capstones, and applied architectures. Every system listed represents complete end-to-end implementation.
+          </p>
+        </div>
+
+        <!-- Filter Bar -->
+        <!-- Filter Bar -->
+        <div class="portfolio-filter-bar" role="tablist" aria-label="Portfolio Category Filters">
+          <button type="button" class="filter-chip active" data-filter="all" role="tab" aria-selected="true" aria-pressed="true">All Systems (9)</button>
+          <button type="button" class="filter-chip" data-filter="companies" role="tab" aria-selected="false" aria-pressed="false">For Companies (4)</button>
+          <button type="button" class="filter-chip" data-filter="students" role="tab" aria-selected="false" aria-pressed="false">For Students (5)</button>
+          <button type="button" class="filter-chip" data-filter="webapp" role="tab" aria-selected="false" aria-pressed="false">Web & Full-Stack (7)</button>
+          <button type="button" class="filter-chip" data-filter="security" role="tab" aria-selected="false" aria-pressed="false">Cybersecurity (1)</button>
+          <button type="button" class="filter-chip" data-filter="ai" role="tab" aria-selected="false" aria-pressed="false">AI & ML (1)</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+          
+          <!-- ================================================================
+               COMPANY PROJECT 1: NESTNOTES (FULL-STACK WEB PLATFORM)
+               ================================================================ -->
+          <article class="project-card-featured" 
+                   data-audience="companies" 
+                   data-category="webapp"
+                   id="project-nestnotes">
+            <div class="project-featured-top">
+              
+              <!-- Left Details -->
+              <div>
+                <div class="project-meta-badges">
+                  <span class="badge badge-audience badge-companies">
+                    Audience: Companies
+                  </span>
+                  <span class="badge" style="border-color: var(--accent-primary);">
+                    Full-Stack Web Development
+                  </span>
+                  <span class="badge">
+                    <span class="badge-dot"></span>
+                    Live on Netlify & Render
+                  </span>
+                </div>
+
+                <h3 class="project-title">NestNotes – Flat Sharing Platform</h3>
+                
+                <p class="project-summary">
+                  NestNotes is a full-stack web application developed to simplify the process of finding shared accommodation and connecting property owners with potential tenants. The platform provides an easy-to-use interface where users can explore available flats, search and filter property listings, view property images, save favourite properties, and express interest in accommodation. Property owners can publish and manage their listings, track interested users, receive messages, and communicate with potential tenants. The platform also includes secure user authentication, listing verification, user dashboards, and an integrated messaging system to make flat-sharing more organized and convenient.
+                </p>
+
+                <div style="margin-bottom: 0.75rem;">
+                  <span class="mono" style="font-size: 0.75rem; font-weight: 600; color: var(--text-primary); text-transform: uppercase; letter-spacing: 0.05em;">
+                    Engineered System Features:
+                  </span>
+                </div>
+
+                <div class="project-features-grid">
+                  <div class="project-feature-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Secure user registration and login</span>
+                  </div>
+                  <div class="project-feature-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Property listing creation, editing and deletion</span>
+                  </div>
+                  <div class="project-feature-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Search and filter functionality</span>
+                  </div>
+                  <div class="project-feature-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Property image uploads</span>
+                  </div>
+                  <div class="project-feature-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Favourite property management</span>
+                  </div>
+                  <div class="project-feature-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Express interest in property listings</span>
+                  </div>
+                  <div class="project-feature-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Owner dashboard and interested-user management</span>
+                  </div>
+                  <div class="project-feature-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>User-to-user messaging system</span>
+                  </div>
+                  <div class="project-feature-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Property listing verification</span>
+                  </div>
+                  <div class="project-feature-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Responsive user interface</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Right Tech Matrix -->
+              <div class="tech-matrix">
+                <span class="tech-matrix-title">Technical Architecture & Stack</span>
+                
+                <div class="tech-tier">
+                  <span class="tech-tier-label">Frontend Layer</span>
+                  <div class="tech-tags-wrap">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                  </div>
+                </div>
+
+                <div class="tech-tier">
+                  <span class="tech-tier-label">Backend & Services</span>
+                  <div class="tech-tags-wrap">
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Express.js</span>
+                    <span class="tech-tag">REST API</span>
+                    <span class="tech-tag">Multer</span>
+                  </div>
+                </div>
+
+                <div class="tech-tier">
+                  <span class="tech-tier-label">Database Storage</span>
+                  <div class="tech-tags-wrap">
+                    <span class="tech-tag">SQLite</span>
+                  </div>
+                </div>
+
+                <div class="tech-tier">
+                  <span class="tech-tier-label">Authentication & Security</span>
+                  <div class="tech-tags-wrap">
+                    <span class="tech-tag">JSON Web Tokens (JWT)</span>
+                    <span class="tech-tag">bcrypt Hashing</span>
+                  </div>
+                </div>
+
+                <div class="tech-tier">
+                  <span class="tech-tier-label">Production Hosting</span>
+                  <div class="tech-tags-wrap">
+                    <span class="tech-tag">Netlify (Frontend)</span>
+                    <span class="tech-tag">Render (Backend)</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Footer Action Row -->
+            <div class="project-card-footer">
+              <div class="project-deploy-info">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Live Deployment: Operational on Netlify & Render</span>
+              </div>
+              <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <a href="https://nestnotes-flat-sharing.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                  Live Link ↗
+                </a>
+                <a href="#contact" class="btn btn-secondary" onclick="prefillInquiry('NestNotes – Flat Sharing Platform', 'webapp')">
+                  Request Architecture Walkthrough
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ================================================================
+               COMPANY PROJECT 2: TRACKMYBUS (FULL-STACK TRANSPORTATION)
+               ================================================================ -->
+          <article class="project-card-standard" 
+                   data-audience="companies" 
+                   data-category="webapp"
+                   id="project-trackmybus">
+            <div class="project-card-body">
+              <div class="project-meta-badges">
+                <span class="badge badge-audience badge-companies">Audience: Companies</span>
+                <span class="badge">Full-Stack Web Development</span>
+                <span class="badge">Transport Management</span>
+              </div>
+              
+              <h3 class="project-title">TrackMyBus – Bus Tracking and Management System</h3>
+              
+              <div class="project-summary">
+                <p>
+                  TrackMyBus is a full-stack web application developed to simplify bus tracking and transportation management. The platform helps passengers track bus locations and allows administrators to manage buses and drivers efficiently.
+                </p>
+                <p>
+                  The application provides an easy-to-use interface where administrators can add, update and manage bus details, assign drivers to buses, and monitor bus information through a dashboard. Drivers can log in, view assigned buses and share their GPS locations. Passengers can explore available routes and track bus locations through an interactive map. Includes role-based access control, driver management, and REST API integration.
+                </p>
+              </div>
+
+              <div class="project-features-compact">
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Admin, Driver & Passenger modules</span>
+                </div>
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>GPS-based bus location tracking</span>
+                </div>
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Interactive Leaflet.js map integration</span>
+                </div>
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Role-based access control & middleware</span>
+                </div>
+              </div>
+
+              <div class="tech-tags-wrap" style="margin-bottom: 1.25rem;">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Bootstrap</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">Laravel</span>
+                <span class="tech-tag">SQLite</span>
+                <span class="tech-tag">Leaflet.js</span>
+                <span class="tech-tag">REST API</span>
+                <span class="tech-tag">Postman</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <span class="mono" style="font-size: 0.75rem; color: var(--text-muted);">Source: TrackMyBus – Laravel Project</span>
+              <a href="#contact" class="btn btn-secondary btn-sm" onclick="prefillInquiry('TrackMyBus – Bus Tracking and Management System', 'webapp')">
+                Demo on Request
+              </a>
+            </div>
+          </article>
+
+          <!-- ================================================================
+               COMPANY PROJECT 3: CLOUDPATH SENTINEL (CLOUD SECURITY)
+               ================================================================ -->
+          <article class="project-card-standard" 
+                   data-audience="companies" 
+                   data-category="security"
+                   id="project-cloudpath">
+            <div class="project-card-body">
+              <div class="project-meta-badges">
+                <span class="badge badge-audience badge-companies">Audience: Companies</span>
+                <span class="badge">Cloud Security</span>
+                <span class="badge">Graph-Based Analysis</span>
+              </div>
+              
+              <h3 class="project-title">CloudPath Sentinel – Cloud Security & Attack-Path Analyzer</h3>
+              
+              <div class="project-summary">
+                <p>
+                  CloudPath Sentinel is a security analysis tool developed to uncover hidden privilege escalation paths and attack chains within cloud environments.
+                </p>
+                <p>
+                  The platform models a cloud account as a directed graph of identities, permissions, and resources, then traverses it to discover how a low-privilege entry point can chain through IAM roles, misconfigured policies, and exposed resources to reach high-value targets. Includes read-only ingestion, blast-radius calculation, risk severity scoring, and interactive graph exploration.
+                </p>
+              </div>
+
+              <div class="project-features-compact">
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Directed graph modelling (NetworkX)</span>
+                </div>
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Read-only cloud configuration ingestion</span>
+                </div>
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Attack-path & privilege escalation detection</span>
+                </div>
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Interactive Streamlit & PyVis dashboard</span>
+                </div>
+              </div>
+
+              <div class="tech-tags-wrap" style="margin-bottom: 1.25rem;">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">NetworkX</span>
+                <span class="tech-tag">Boto3 (AWS SDK)</span>
+                <span class="tech-tag">Typer (CLI)</span>
+                <span class="tech-tag">Streamlit</span>
+                <span class="tech-tag">PyVis</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">IAM Security</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <span class="mono" style="font-size: 0.75rem; color: var(--text-muted);">Status: Currently Under Development</span>
+              <a href="#contact" class="btn btn-secondary btn-sm" onclick="prefillInquiry('CloudPath Sentinel – Cloud Security & Attack-Path Analyzer', 'security')">
+                Demo on Request
+              </a>
+            </div>
+          </article>
+
+          <!-- ================================================================
+               COMPANY PROJECT 4: INTELLIOPS (AI & AUTONOMOUS OPERATIONS)
+               ================================================================ -->
+          <article class="project-card-featured" 
+                   data-audience="companies" 
+                   data-category="ai"
+                   id="project-intelliops">
+            <div class="project-featured-top">
+              
+              <!-- Left Details -->
+              <div>
+                <div class="project-meta-badges">
+                  <span class="badge badge-audience badge-companies">
+                    Audience: Companies
+                  </span>
+                  <span class="badge" style="border-color: var(--accent-primary);">
+                    AI-Powered Full-Stack / AIOps
+                  </span>
+                  <span class="badge">
+                    <span class="badge-dot"></span>
+                    Status: In Development
+                  </span>
+                </div>
+
+                <h3 class="project-title">IntelliOps – AI-Powered Autonomous IT Operations & Root Cause Analysis Platform</h3>
+                
+                <p class="project-summary">
+                  IntelliOps is an AI-powered IT operations and monitoring platform designed to help organizations monitor application performance, detect system failures, identify potential root causes, and automate incident analysis. The platform collects and analyses application logs, system metrics, and infrastructure health data to identify unusual behaviour, performance degradation, and potential system failures before they significantly impact business operations. Using AI and machine learning techniques, IntelliOps helps developers and IT operations teams investigate incidents, identify underlying causes, and receive intelligent recommendations for resolving technical issues efficiently.
+                </p>
+
+                <div style="margin-bottom: 0.75rem;">
+                  <span class="mono" style="font-size: 0.75rem; font-weight: 600; color: var(--text-primary); text-transform: uppercase; letter-spacing: 0.05em;">
+                    Engineered System Features:
+                  </span>
+                </div>
+
+                <div class="project-features-grid">
+                  <div class="project-feature-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Real-time application & infrastructure monitoring</span>
+                  </div>
+                  <div class="project-feature-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Centralized application log collection & analysis</span>
+                  </div>
+                  <div class="project-feature-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>AI-based anomaly and failure detection</span>
+                  </div>
+                  <div class="project-feature-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Automated root cause analysis & dependency mapping</span>
+                  </div>
+                  <div class="project-feature-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Service dependency visualization</span>
+                  </div>
+                  <div class="project-feature-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Predictive failure alerts & notifications</span>
+                  </div>
+                  <div class="project-feature-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>AI-generated incident summaries and reports</span>
+                  </div>
+                  <div class="project-feature-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Intelligent troubleshooting & recovery recommendations</span>
+                  </div>
+                  <div class="project-feature-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Interactive Grafana & Prometheus dashboards</span>
+                  </div>
+                  <div class="project-feature-item">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Historical incident analysis and reporting</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Right Tech Matrix -->
+              <div class="tech-matrix">
+                <span class="tech-matrix-title">Technical Architecture & Stack</span>
+                
+                <div class="tech-tier">
+                  <span class="tech-tier-label">Frontend Layer</span>
+                  <div class="tech-tags-wrap">
+                    <span class="tech-tag">React.js</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">Tailwind CSS</span>
+                  </div>
+                </div>
+
+                <div class="tech-tier">
+                  <span class="tech-tier-label">Backend & API</span>
+                  <div class="tech-tags-wrap">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">REST API</span>
+                  </div>
+                </div>
+
+                <div class="tech-tier">
+                  <span class="tech-tier-label">Database Storage</span>
+                  <div class="tech-tags-wrap">
+                    <span class="tech-tag">PostgreSQL</span>
+                  </div>
+                </div>
+
+                <div class="tech-tier">
+                  <span class="tech-tier-label">AI & Machine Learning</span>
+                  <div class="tech-tags-wrap">
+                    <span class="tech-tag">Scikit-learn</span>
+                    <span class="tech-tag">LLM Integration</span>
+                    <span class="tech-tag">Anomaly Detection</span>
+                    <span class="tech-tag">Root Cause Analysis</span>
+                  </div>
+                </div>
+
+                <div class="tech-tier">
+                  <span class="tech-tier-label">Observability & DevOps</span>
+                  <div class="tech-tags-wrap">
+                    <span class="tech-tag">Prometheus</span>
+                    <span class="tech-tag">Grafana</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">Git & GitHub</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Footer Action Row -->
+            <div class="project-card-footer">
+              <div class="project-deploy-info">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Development Status: In Development // Early Architecture Preview</span>
+              </div>
+              <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <a href="#contact" class="btn btn-secondary" onclick="prefillInquiry('IntelliOps – AI-Powered Autonomous IT Operations', 'ai')">
+                  Demo on Request
+                </a>
+                <a href="#contact" class="btn btn-primary" onclick="prefillInquiry('IntelliOps Architecture Deep Dive', 'ai')">
+                  Request System Briefing
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ================================================================
+               STUDENT PROJECT 1: TO-DO LIST (FRONTEND WEB DEV)
+               ================================================================ -->
+          <article class="project-card-standard" 
+                   data-audience="students" 
+                   data-category="webapp"
+                   id="project-todolist">
+            <div class="project-card-body">
+              <div class="project-meta-badges">
+                <span class="badge badge-audience badge-students">Audience: Students</span>
+                <span class="badge">Frontend Web Development</span>
+                <span class="badge">Academic / Capstone</span>
+              </div>
+              
+              <h3 class="project-title">To-do List – Task Management Application</h3>
+              
+              <div class="project-summary">
+                <p>
+                  The To-do List Application is a web-based application developed to help users organize and manage their daily activities efficiently. The application provides a simple and interactive interface where users can add tasks and keep track of their work. This project demonstrates fundamental frontend web development concepts, including page structure, styling and user interaction.
+                </p>
+              </div>
+
+              <div class="project-features-compact">
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Add and manage daily tasks</span>
+                </div>
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Display tasks in an organized list</span>
+                </div>
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Simple and user-friendly interface</span>
+                </div>
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Interactive task management & clean styling</span>
+                </div>
+              </div>
+
+              <div class="tech-tags-wrap" style="margin-bottom: 1.25rem;">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">DOM Manipulation</span>
+                <span class="tech-tag">Responsive Layout</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <span class="mono" style="font-size: 0.75rem; color: var(--text-muted);">Academic Repository: Moni2007c-png</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="https://github.com/moni2007c-png/To-do" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  GitHub Repo ↗
+                </a>
+                <a href="#contact" class="btn btn-primary btn-sm" onclick="prefillInquiry('To-do List – Task Management Application', 'webapp')">
+                  Demo on Request
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ================================================================
+               STUDENT PROJECT 2: GLASSMORPHISM (WEB APP & UI DESIGN)
+               ================================================================ -->
+          <article class="project-card-standard" 
+                   data-audience="students" 
+                   data-category="webapp"
+                   id="project-glassmorphism">
+            <div class="project-card-body">
+              <div class="project-meta-badges">
+                <span class="badge badge-audience badge-students">Audience: Students</span>
+                <span class="badge">Web Development</span>
+                <span class="badge">UI Design / Django</span>
+              </div>
+              
+              <h3 class="project-title">Glassmorphism – Web Application</h3>
+              
+              <div class="project-summary">
+                <p>
+                  The Glassmorphism project is a web application developed using Python and Django, focusing on modern user interface design. The application incorporates the glassmorphism design concept, which uses transparency, background blur and layered visual elements to create an elegant interface. This project demonstrates the integration of frontend styling with Django-based web application development.
+                </p>
+              </div>
+
+              <div class="project-features-compact">
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Modern glassmorphism user interface</span>
+                </div>
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Transparent elements & background blur</span>
+                </div>
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Structured webpage layout</span>
+                </div>
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Integration of HTML/CSS with Django backend</span>
+                </div>
+              </div>
+
+              <div class="tech-tags-wrap" style="margin-bottom: 1.25rem;">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Django</span>
+                <span class="tech-tag">UI/UX Glassmorphism</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <span class="mono" style="font-size: 0.75rem; color: var(--text-muted);">Academic Repository: Moni2007c-png</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="https://github.com/moni2007c-png/GLASS-PROJECT" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  GitHub Repo ↗
+                </a>
+                <a href="#contact" class="btn btn-primary btn-sm" onclick="prefillInquiry('Glassmorphism – Web Application', 'webapp')">
+                  Demo on Request
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ================================================================
+               STUDENT PROJECT 3: CRUD APPLICATION (DATA MANAGEMENT)
+               ================================================================ -->
+          <article class="project-card-standard" 
+                   data-audience="students" 
+                   data-category="webapp"
+                   id="project-crudapp">
+            <div class="project-card-body">
+              <div class="project-meta-badges">
+                <span class="badge badge-audience badge-students">Audience: Students</span>
+                <span class="badge">Web Development</span>
+                <span class="badge">CRUD Application</span>
+              </div>
+              
+              <h3 class="project-title">CRUD Application – Data Management System</h3>
+              
+              <div class="project-summary">
+                <p>
+                  The CRUD Application is a web-based application developed to demonstrate the fundamental operations of data management. CRUD stands for Create, Read, Update and Delete. The application focuses on managing records through these operations, providing a practical understanding of how data can be created, displayed, modified and removed within a web application.
+                </p>
+              </div>
+
+              <div class="project-features-compact">
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Create and add new database records</span>
+                </div>
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Display and retrieve stored records</span>
+                </div>
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Update & modify existing information</span>
+                </div>
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Delete records & data integrity checks</span>
+                </div>
+              </div>
+
+              <div class="tech-tags-wrap" style="margin-bottom: 1.25rem;">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">CRUD Operations</span>
+                <span class="tech-tag">Data Management</span>
+                <span class="tech-tag">Backend Architecture</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <span class="mono" style="font-size: 0.75rem; color: var(--text-muted);">Academic Repository: Moni2007c-png</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="https://github.com/moni2007c-png/crudproject" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  GitHub Repo ↗
+                </a>
+                <a href="#contact" class="btn btn-primary btn-sm" onclick="prefillInquiry('CRUD Application – Data Management System', 'webapp')">
+                  Demo on Request
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ================================================================
+               STUDENT PROJECT 4: WEATHER APP (INFORMATION APP)
+               ================================================================ -->
+          <article class="project-card-standard" 
+                   data-audience="students" 
+                   data-category="webapp"
+                   id="project-weatherapp">
+            <div class="project-card-body">
+              <div class="project-meta-badges">
+                <span class="badge badge-audience badge-students">Audience: Students</span>
+                <span class="badge">Frontend Web Development</span>
+                <span class="badge">Weather Information App</span>
+              </div>
+              
+              <h3 class="project-title">Weather App – Weather Information Application</h3>
+              
+              <div class="project-summary">
+                <p>
+                  The Weather App is a web application developed to provide weather-related information through an interactive and user-friendly interface. The project demonstrates the use of frontend technologies to create a structured application interface and implement dynamic interactions. It focuses on presenting weather information in an accessible and visually organized manner.
+                </p>
+              </div>
+
+              <div class="project-features-compact">
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Weather information display interface</span>
+                </div>
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Interactive and intuitive user interface</span>
+                </div>
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Dynamic frontend interactions</span>
+                </div>
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Responsive and structured layout</span>
+                </div>
+              </div>
+
+              <div class="tech-tags-wrap" style="margin-bottom: 1.25rem;">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Dynamic UI Presentation</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <span class="mono" style="font-size: 0.75rem; color: var(--text-muted);">Academic Repository: Moni2007c-png</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="https://github.com/moni2007c-png/WEATHER-APP" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  GitHub Repo ↗
+                </a>
+                <a href="#contact" class="btn btn-primary btn-sm" onclick="prefillInquiry('Weather App – Weather Information Application', 'webapp')">
+                  Demo on Request
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- ================================================================
+               STUDENT PROJECT 5: LOGIN FORM (USER LOGIN INTERFACE)
+               ================================================================ -->
+          <article class="project-card-standard" 
+                   data-audience="students" 
+                   data-category="webapp"
+                   id="project-loginform">
+            <div class="project-card-body">
+              <div class="project-meta-badges">
+                <span class="badge badge-audience badge-students">Audience: Students</span>
+                <span class="badge">Frontend Web Development</span>
+                <span class="badge">Authentication UI Design</span>
+              </div>
+              
+              <h3 class="project-title">Login Form – User Login Interface</h3>
+              
+              <div class="project-summary">
+                <p>
+                  The Login Form is a frontend web development project designed to create a structured and user-friendly login interface. The project focuses on designing credential input fields and organizing form elements using HTML and CSS. It demonstrates fundamental concepts of web page structure, form design and visual styling.
+                </p>
+              </div>
+
+              <div class="project-features-compact">
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>User login interface design</span>
+                </div>
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Username or email input field</span>
+                </div>
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Password input field</span>
+                </div>
+                <div class="project-feature-item-compact">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  <span>Structured form layout & visual styling</span>
+                </div>
+              </div>
+
+              <div class="tech-tags-wrap" style="margin-bottom: 1.25rem;">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3 Form Styling</span>
+                <span class="tech-tag">Visual Layout</span>
+                <span class="tech-tag">Form Design</span>
+              </div>
+            </div>
+
+            <div class="project-card-footer">
+              <span class="mono" style="font-size: 0.75rem; color: var(--text-muted);">Academic Repository: Moni2007c-png</span>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <a href="https://github.com/moni2007c-png/Login-form" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                  GitHub Repo ↗
+                </a>
+                <a href="#contact" class="btn btn-primary btn-sm" onclick="prefillInquiry('Login Form – User Login Interface', 'webapp')">
+                  Demo on Request
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. 4-STEP DELIVERY & MENTORSHIP PROCESS
+         ======================================================================== -->
+    <section class="process-section section-padding" id="process">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-label">METHODOLOGY</span>
+          <h2 class="section-title" id="process-title">Engineered Delivery Lifecycle</h2>
+          <p class="section-desc" id="process-desc">
+            A structured, transparent workflow ensuring zero communication lag, predictable release milestones, and production-tested code delivery.
+          </p>
+        </div>
+
+        <div class="process-grid" id="process-grid">
+          
+          <div class="process-step-card">
+            <span class="process-step-num">01</span>
+            <h3 class="process-step-title" id="step-1-title">Discovery & Architecture</h3>
+            <p class="process-step-desc" id="step-1-desc">
+              We define precise API contracts, data models, infrastructure requirements, and security baselines before writing a single line of code.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <span class="process-step-num">02</span>
+            <h3 class="process-step-title" id="step-2-title">Sprint Development</h3>
+            <p class="process-step-desc" id="step-2-desc">
+              Weekly iterative development cycles with clean Git commits, PR reviews, preview deployments, and continuous client test access.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <span class="process-step-num">03</span>
+            <h3 class="process-step-title" id="step-3-title">Security & QA Audits</h3>
+            <p class="process-step-desc" id="step-3-desc">
+              Thorough OWASP vulnerability testing, database query optimization, load benchmarks, and cross-browser accessibility verification.
+            </p>
+          </div>
+
+          <div class="process-step-card">
+            <span class="process-step-num">04</span>
+            <h3 class="process-step-title" id="step-4-title">Deployment & Handover</h3>
+            <p class="process-step-desc" id="step-4-desc">
+              Production deployment to your cloud account, complete documentation, automated CI/CD pipeline handover, and post-launch SLA support.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. PROMINENT CONTACT & STATIC INQUIRY HUB
+         ======================================================================== -->
+    <section class="contact-section section-padding" id="contact">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-label">DIRECT CHANNELS</span>
+          <h2 class="section-title">Start a Conversation</h2>
+          <p class="section-desc">
+            Direct communication lines. Reach our engineering team for corporate technical projects or connect with our academic project mentors.
+          </p>
+        </div>
+
+        <div class="contact-layout">
+          
+          <!-- Direct Channels Column -->
+          <div class="contact-direct-column">
+            
+            <div class="direct-channels-grid">
+              
+              <!-- Direct Email -->
+              <a href="mailto:code.craft.studio045@gmail.com" class="direct-channel-card" id="contact-email-card">
+                <div class="channel-info">
+                  <div class="channel-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </div>
+                  <div>
+                    <span class="channel-name">Official Email</span>
+                    <div class="channel-val" id="contact-email-text">code.craft.studio045@gmail.com</div>
+                  </div>
+                </div>
+                <span class="channel-arrow">→</span>
+              </a>
+
+              <!-- Direct WhatsApp -->
+              <a href="https://wa.me/918105699186?text=Hello%20Team%2C%20I%20would%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener noreferrer" class="direct-channel-card">
+                <div class="channel-info">
+                  <div class="channel-icon" style="color: #25D366;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                  </div>
+                  <div>
+                    <span class="channel-name">WhatsApp Direct Chat</span>
+                    <div class="channel-val">+91 85500 15193</div>
+                    <div class="channel-val">+91 81056 99186</div>
+                  </div>
+                </div>
+                <span class="channel-arrow">↗</span>
+              </a>
+
+              <!-- Direct Phone -->
+              <a href="tel:+918550015193" class="direct-channel-card">
+                <div class="channel-info">
+                  <div class="channel-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <div>
+                    <span class="channel-name">Telephone Line</span>
+                    <div class="channel-val">+91 85500 15193</div>
+                    <div class="channel-val">+91 81056 99186</div>
+                    
+                  </div>
+                </div>
+                <span class="channel-arrow">→</span>
+              </a>
+
+            </div>
+
+            <!-- Operating Hours & SLA Card -->
+            <div class="office-info-card">
+              <span class="office-info-title">Studio Availability & SLA</span>
+              <p class="office-info-desc">
+                <strong>Operating Schedule:</strong> Monday – Saturday, 09:00 – 20:00 (IST / UTC+5:30)<br>
+                <strong>Guaranteed Response:</strong> Under 6 business hours for enterprise inquiries, same-day consultation for academic final-year capstones.
+              </p>
+              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-primary); display: flex; align-items: center; gap: 0.4rem;">
+                <span class="specs-status-pulse"></span>
+                <span>Direct consultation slots open for this quarter</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Static Inquiry Form -->
+          <div class="inquiry-form-card">
+            <h3 class="form-title" id="form-heading">Send a Project Brief</h3>
+            <p class="form-subtitle" id="form-subheading">
+              Fill out the details below. Since this is a static site, you can submit instantly or click "Copy Brief & Launch Mail Client" to send directly from your email application.
+            </p>
+
+            <form class="inquiry-form" id="inquiry-form" onsubmit="handleFormSubmit(event)">
+              
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-name" class="form-label">Your Name *</label>
+                  <input type="text" id="form-name" class="form-input" placeholder="e.g. Alex Mercer" required>
+                </div>
+                <div class="form-group">
+                  <label for="form-email" class="form-label">Email or Phone *</label>
+                  <input type="text" id="form-email" class="form-input" placeholder="alex@company.com or phone" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="form-audience" class="form-label">Audience Category</label>
+                  <select id="form-audience" class="form-select" onchange="syncThemeFromForm(this.value)">
+                    <option value="companies">Enterprise / Company Project</option>
+                    <option value="students">Student / Final-Year Capstone</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="form-service" class="form-label">Primary Service Pillar</label>
+                  <select id="form-service" class="form-select">
+                    <option value="webapp">Web & Mobile Application</option>
+                    <option value="ai">Applied AI & Machine Learning</option>
+                    <option value="security">Cybersecurity & Security Audit</option>
+                    <option value="design">UI/UX & Systems Design</option>
+                    <option value="capstone">Complete Capstone Package + Report</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-brief" class="form-label">Project Brief / Problem Statement *</label>
+                <textarea id="form-brief" class="form-textarea" placeholder="Describe your technical requirements, desired timeline, or academic project topic..." required></textarea>
+              </div>
+
+              <div class="form-actions-group">
+                <div class="form-actions-row">
+                  <button type="submit" class="btn btn-primary" id="form-submit-btn">
+                    Submit Inquiry
+                  </button>
+                  <button type="button" class="btn btn-secondary" id="form-copy-btn" onclick="copyAndOpenEmail()">
+                    Copy Brief & Open Email ↗
+                  </button>
+                </div>
+                
+                <div class="form-feedback-msg" id="form-feedback"></div>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       7. MINIMALIST SWISS FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-top">
+        
+        <!-- Brand & Dual Identity -->
+        <div class="footer-brand-wrap">
+          <div class="footer-dual-logos">
+            <div class="footer-logo-badge">
+              <img src="assets/CodeCraftStudio_logo.jpeg" alt="CodeCraft Logo">
+              <span>CodeCraft Studio</span>
+            </div>
+            <div class="footer-logo-badge">
+              <img src="assets/ProjectBuddyHub.png" alt="ProjectBuddyHub Logo">
+              <span>ProjectBuddyHub</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Dual-audience software studio delivering enterprise engineering architectures and guided academic capstones with verified source code.
+          </p>
+        </div>
+
+        <!-- Pillar Links -->
+        <div>
+          <h4 class="footer-col-title">Capabilities</h4>
+          <ul class="footer-links-list">
+            <li><a href="#services" class="footer-link">Web Engineering</a></li>
+            <li><a href="#services" class="footer-link">Mobile Apps (Flutter/RN)</a></li>
+            <li><a href="#services" class="footer-link">Applied AI & RAG</a></li>
+            <li><a href="#services" class="footer-link">Cybersecurity Audits</a></li>
+          </ul>
+        </div>
+
+        <!-- Portfolio Links -->
+        <div>
+          <h4 class="footer-col-title">Featured Systems</h4>
+          <ul class="footer-links-list">
+            <li><a href="#project-nestnotes" class="footer-link">NestNotes Platform</a></li>
+            <li><a href="#project-trackmybus" class="footer-link">TrackMyBus System</a></li>
+            <li><a href="#project-cloudpath" class="footer-link">CloudPath Sentinel</a></li>
+            <li><a href="#project-intelliops" class="footer-link">IntelliOps Platform</a></li>
+          </ul>
+        </div>
+
+        <!-- Direct Contact Links -->
+        <div>
+          <h4 class="footer-col-title">Direct Inquiries</h4>
+          <ul class="footer-links-list">
+            <li><a href="mailto:code.craft.studio045@gmail.com" class="footer-link">code.craft.studio045@gmail.com</a></li>
+            <li><a href="tel:+918550015193" class="footer-link">+1 85500 15193</a></li>
+            <li><a href="https://wa.me/918550015193" class="footer-link" target="_blank" rel="noopener">WhatsApp Direct</a></li>
+            <li><a href="#contact" class="footer-link">Static Inquiry Form</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          © <span id="current-year">2026</span> CodeCraft Studio & ProjectBuddyHub. Built with semantic HTML5, modern CSS & vanilla JS.
+        </div>
+        <div class="footer-system-status">
+          <span class="specs-status-pulse"></span>
+          <span>SYSTEM STATUS // ALL ENDPOINTS OPERATIONAL</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Toast Notification element -->
+  <div class="toast-notice" id="toast-notice" role="status" aria-live="polite">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    <span id="toast-msg">Project brief copied to clipboard.</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
